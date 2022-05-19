@@ -1,3 +1,3 @@
 module.exports.home = function(req, res){
-    return res.end('<h1>Good Job! Express is up for To Do List</h1>');
+    return res.end('<h1>This is home page for To Do List app</h1>');
 }
