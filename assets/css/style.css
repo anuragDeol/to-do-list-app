@@ -77,15 +77,18 @@ body{
 #task-container{
     display: flex;
     width: 100%;
-    /* justify-content: space-between; */
     align-items: center;
     margin: 1% 0;
 
     border: 1px solid black;
 }
 
+#task-container a i{
+    margin-left: 20%;
+    color: red;
+}
+
 #task-container #task-date-div{
-    /* flex-grow: 2; */
     display: flex;
     flex-direction: column;
     margin-left: 1%;
@@ -97,5 +100,5 @@ body{
     margin-right: 1%;
     margin-left: auto;
 
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }

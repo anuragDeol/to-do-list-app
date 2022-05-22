@@ -31,10 +31,13 @@
                             <i class="fa-solid fa-plus"></i>
                             ADD TASK
                         </button>
-                        <button type="submit">
+                        <!-- <button>
                             <i class="fa-solid fa-trash-can"></i>
-                            DELETE TASK
-                        </button>
+                            <% for(let i of tasksArr) { %>
+                                <% let x %>
+                                <a href="/delete-task/?task=<%=  %>">DELETE TASK</a>
+                            <% } %>
+                        </button> -->
                     </div>
                 </form>
 
@@ -43,20 +46,21 @@
             <div id="tasks-list-container">
                 <% for(let i of tasksArr) { %>
                     <div id="task-container">
-                        <!-- <fieldset> -->
-                            <input type="checkbox" name="checkbox">
-                                <div id="task-date-div">
-                                    <%= i.task %>
-                                    <br>
-                                    <span>
-                                        <i class="fa-solid fa-calendar"></i>
-                                        <%= i.date %>
-                                    </span>
-                                </div>
-                                <span id="category-span">
-                                    <%= i.category %>
+                        <!-- <input type="checkbox" id="checkbox" name="checkbox"> -->
+                        <a href="/delete-task/?task=<%= i.task %>"><i class="fa-solid fa-trash"></i></a>
+                        <div id="task-date-div">
+                            <!-- <div > -->
+                                <%= i.task %>
+                                <br>
+                                <span>
+                                    <i class="fa-solid fa-calendar"></i>
+                                    <%= i.date %>
                                 </span>
-                        <!-- </fieldset> -->
+                            <!-- </div> -->
+                            </div>
+                        <span id="category-span">
+                            <%= i.category %>
+                        </span>
                     </div>
                 <% } %>
             </div>
