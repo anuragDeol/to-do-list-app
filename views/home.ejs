@@ -47,7 +47,8 @@
                 <% for(let i of tasksArr) { %>
                     <div id="task-container">
                         <!-- <input type="checkbox" id="checkbox" name="checkbox"> -->
-                        <a href="/delete-task/?task=<%= i.task %>"><i class="fa-solid fa-trash"></i></a>
+                        <!-- <a href="/delete-task/?task=<%= i.task %>"><i class="fa-solid fa-trash"></i></a> -->
+                        <a href="/delete-task/?id=<%= i._id %>"><i class="fa-solid fa-trash"></i></a>
                         <div id="task-date-div">
                             <!-- <div > -->
                                 <%= i.task %>

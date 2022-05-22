@@ -7,8 +7,8 @@ const todoSchema = new mongoose.Schema({
         required: true     // 'required' specifies that the field is required
     },
     date: {
-        type: date,
-        required: true;
+        type: String,
+        required: true
     },
     category: {
         type: String,
@@ -17,6 +17,7 @@ const todoSchema = new mongoose.Schema({
 });
 
 
+const todoModel = mongoose.model('todoModel', todoSchema);
 
 // exporting this module
 module.exports = todoModel;
