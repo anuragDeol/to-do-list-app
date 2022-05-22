@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+
+    border: 2px solid black;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    border: 2px solid red;
+}
+
+#form-container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    /* border: 2px solid red; */
+}
+
+#form-container #task-description{
+    padding: 2% 1.5% 4% 1.5%;
+    margin: 1% 0;
+    border: 1px grey solid;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+}
+
+#form-container #category{
+    padding: 1% 0.5% 2% 0.5%;
+    margin: 1% 0;
+    border: 1px grey solid;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+}
+
+
+
+#form-container #date-container {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 99.4%;
+    padding: 1% 0.5% 2% 0.5%;
+    margin: 1% 0;
+    border: 1px solid grey;
+    border-left: none;
+    border-right: none;
+}
+
+#form-container #date-container input{
+    width: 60%;
+}
+
+#tasks-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    border: 2px solid black;
+}
+
+#task-container{
+    display: flex;
+    width: 100%;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 1% 0;
+
+    border: 1px solid black;
+}
+
+#task-container #task-date-div{
+    /* flex-grow: 2; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+
+    /* border: 2px solid black; */
+}
+
+#category-span{
+    margin-right: 1%;
+    margin-left: auto;
+
+    border: 2px solid black;
+}
