@@ -55,7 +55,7 @@ module.exports.addTask = function(req, res){
         task: req.body.task,
         date: req.body.date,
         category: req.body.category
-    }, function(err, newCreatedTodoIted){
+    }, function(err, newlyCreatedTodoItem){
         if(err){
             console.log(`${err} error encountered while adding to DB`);
             return;
