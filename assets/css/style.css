@@ -10,6 +10,7 @@ body{
     width: 50%;
     align-items: center;
     background-color: rgb(57,66,83);
+    border-radius: 0.8%;
 
     /* border: 2px solid black; */
 }
@@ -98,6 +99,11 @@ h1{
     /* border: 2px solid black; */
 }
 
+#tasks-list-container #date{
+    font-family: unset;    
+    font-size: 0.7rem;
+}
+
 #task-container{
     display: flex;
     width: 95%;
@@ -110,20 +116,39 @@ h1{
     border-left: none;
     border-right: none;
     border-radius: 25px;
-    padding: 2%;
+    padding: 1%;
+}
+
+
+#task-container a{
+    margin-right: 1%;
 }
 
 #task-container a i{
     margin-left: 20%;
-    color: red;
+    color: rgb(18,25,41);
+    transition: 0.2s;
+}
+
+#task-container:hover a i{
+    color: rgb(248, 175, 175);
 }
 
 #task-container #task-date-div{
     display: flex;
     flex-direction: column;
     margin-left: 1%;
+    font-family: consolas;
 
     /* border: 2px solid black; */
+}
+
+#task-container #category-span{
+    font-family: consolas;
+    font-size: 0.9rem;
+    background-color: rgb(57,66,83);
+    padding: 1%;
+    border-radius: 0 25px 25px 0;
 }
 
 #button-div button{
@@ -161,4 +186,8 @@ h1{
 /*other-styles*/
 .font-family-fontawesome{
     font-family: 'FontAwesome';
+}
+
+.font-size-opoint9rem{
+    font-size: 0.9rem;
 }
