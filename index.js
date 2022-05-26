@@ -4,15 +4,17 @@ const port = 8000;
 const db = require('./config/mongoose');
 const bodyParser = require('body-parser');
 
+// create express app
 app.use(express.static('./assets'));
 
-// use express router
 // set up the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+// middleware to parse the request
 app.use(bodyParser.urlencoded({extended: false}));
 
-
+// use express router
 app.use('/', require('./routes'));      // middleware
 app.listen(port, function(err){
     if(err){

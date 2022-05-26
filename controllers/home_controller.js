@@ -35,7 +35,7 @@ module.exports.home = function(req, res){
         }
         return res.render('home.ejs', {
             title: "MongoDB",
-            tasksArr: myTodoModel
+            tasksArr: myTodoModel,
         });
     });
 }
@@ -60,7 +60,12 @@ module.exports.addTask = function(req, res){
             console.log(`${err} error encountered while adding to DB`);
             return;
         }
-        return res.redirect('back');
+        // return res.redirect('back');
+        return res.render('home.ejs', {
+            title: "MongoDB",
+            tasksArr: myTodoModel,
+            sdfsdf: req.body.category
+        });
     });
 }
 

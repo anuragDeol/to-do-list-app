@@ -1,9 +1,11 @@
+/* body */
 body{
     display: flex;
     justify-content: center;
     background: linear-gradient(60deg, white, rgb(155,52,224), rgb(206,34,112));
 }
 
+/* main-container */
 #main-container{
     display: flex;
     flex-direction: column;
@@ -19,6 +21,7 @@ h1{
     color: rgb(111,119,136);
 }
 
+/* form-container */
 #form-container{
     display: flex;
     flex-direction: column;
@@ -64,8 +67,6 @@ h1{
     border-right: none;
 }
 
-
-
 #form-container #date-container {
     display: flex;
     justify-content: space-around;
@@ -89,6 +90,7 @@ h1{
     border-radius: 5px 10px 10px 5px;
 }
 
+/* tasks-list-container */
 #tasks-list-container{
     display: flex;
     flex-direction: column;
@@ -98,12 +100,18 @@ h1{
 
     /* border: 2px solid black; */
 }
+#tasks-list-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 
 #tasks-list-container #date{
     font-family: unset;    
     font-size: 0.7rem;
 }
 
+
+/* task-container */
 #task-container{
     display: flex;
     width: 95%;
@@ -143,10 +151,18 @@ h1{
     /* border: 2px solid black; */
 }
 
+.Personal{
+    background-color: red;
+}
+
+.Work{
+    background-color: grey;
+}
+
 #task-container #category-span{
     font-family: consolas;
     font-size: 0.9rem;
-    background-color: rgb(57,66,83);
+    /* background-color: rgb(57,66,83); */
     padding: 1%;
     border-radius: 0 25px 25px 0;
 }

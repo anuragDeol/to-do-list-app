@@ -20,10 +20,9 @@
                         <option value="Cleaning">Cleaning</option>
                         <option value="Other">Other</option>
                     </select>
-                    <!-- <label for="date">Due Date</label> -->
                     <div id="date-container">
                         <span>Due Date:</span>
-                        <input type="date" id="date" name="date" value="2022-01-01" required>
+                        <input type="date" id="date" name="date" required>
                     </div>
 
                     <div id="button-div">
@@ -39,6 +38,7 @@
             <div id="tasks-list-container">
                 <% for(let i of tasksArr) { %>
                     <div id="task-container">
+                        <!-- here 'id' refers to the id of the element which is stored in our database -->
                         <a href="/delete-task/?id=<%= i._id %>"><i class="fa-solid fa-ban"></i></a>
                         <div id="task-date-div">
                                 <%= i.task %>
@@ -48,9 +48,17 @@
                                     <%= i.date %>
                                 </span>
                             </div>
-                        <span id="category-span">
-                            <%= i.category %>
-                        </span>
+                            <% if(i.category==="Personal") { %>
+                                <span id="category-span" class="Personal">
+                                <%= i.category %>
+                                </span>
+                            <%}%>
+                            <% if(i.category==="Work") { %>
+                                <span id="category-span" class="Work">
+                                <%= i.category %>
+                                </span>
+                            <%}%>
+                        
                     </div>
                 <% } %>
             </div>
