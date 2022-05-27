@@ -1,4 +1,4 @@
-// This is the main routing file - i.e. we go to all further routes from this route
+// This is the main routing file - i.e. we go to all further routes from this router
 const express = require('express');
 const router = express.Router();
 

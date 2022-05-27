@@ -15,7 +15,8 @@ app.set('views', './views');
 app.use(bodyParser.urlencoded({extended: false}));
 
 // use express router
-app.use('/', require('./routes'));      // middleware
+app.use('/', require('./routes'));
+
 app.listen(port, function(err){
     if(err){
         console.log(`${err} error occured in running the server`);

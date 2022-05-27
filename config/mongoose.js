@@ -1,3 +1,4 @@
+// to establish connection between mongoose and mongoDB
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/to-do-list-app');

@@ -13,8 +13,6 @@ body{
     align-items: center;
     background-color: rgb(57,66,83);
     border-radius: 0.8%;
-
-    /* border: 2px solid black; */
 }
 
 h1{
@@ -26,8 +24,6 @@ h1{
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    /* border: 2px solid red; */
 }
 
 #form-container form{
@@ -35,8 +31,6 @@ h1{
     flex-direction: column;
     width: 100%;
     align-items: center;
-
-    /* border: 2px solid red; */
 }
 
 #form-container #task-description{
@@ -45,7 +39,6 @@ h1{
     width: 100%;
     background-color: rgb(33,42,57);
     color: white;
-
     border: 0px black solid;
     border-left: none;
     border-right: none;
@@ -61,7 +54,6 @@ h1{
     width: 100%;
     background-color: rgb(33,42,57);
     color: rgb(111,121,127);
-    
     border: 0px grey solid;
     border-left: none;
     border-right: none;
@@ -76,13 +68,11 @@ h1{
     margin: 1% 0;
     background-color: rgb(33,42,57);
     color: rgb(111,121,127);
-
     border-left: none;
     border-right: none;
 }
 
 #form-container #date-container input{
-    /* width: 60%; */
     border: 1px solid white;
     background-color: rgb(247, 250, 255);
     color: black;
@@ -97,9 +87,8 @@ h1{
     align-items: center;
     width: 100%;
     overflow: auto;
-
-    /* border: 2px solid black; */
 }
+
 #tasks-list-container::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
@@ -108,6 +97,20 @@ h1{
 #tasks-list-container #date{
     font-family: unset;    
     font-size: 0.7rem;
+}
+
+#empty-task-container{
+    height: 100%;
+    margin: 9%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#empty-task-container i{
+    color: rgb(111,119,136);
 }
 
 
@@ -126,7 +129,6 @@ h1{
     border-radius: 25px;
     padding: 1%;
 }
-
 
 #task-container a{
     margin-right: 1%;
@@ -147,22 +149,11 @@ h1{
     flex-direction: column;
     margin-left: 1%;
     font-family: consolas;
-
-    /* border: 2px solid black; */
-}
-
-.Personal{
-    background-color: red;
-}
-
-.Work{
-    background-color: grey;
 }
 
 #task-container #category-span{
     font-family: consolas;
     font-size: 0.9rem;
-    /* background-color: rgb(57,66,83); */
     padding: 1%;
     border-radius: 0 25px 25px 0;
 }
@@ -175,28 +166,20 @@ h1{
     border: 0 solid black;
     font-size: 1.2rem;
     background-color: rgb(18,25,41);
-    color: rgb(201, 60, 152);
+    color: rgb(111,119,136);
     font-weight: 550;
-    
-    /* background: -webkit-linear-gradient(60deg, rgb(201, 60, 152), rgb(117, 87, 174));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    /* background-color: rgb(111,119,136); */
+    cursor:pointer;
     transition: 0.2s;
-
 }
 
 #button-div button:hover{
-    background-color: rgb(151, 157, 172);
-    color: rgb(110, 20, 79);
-
+    background-color: rgb(111,119,136);
+    color: rgb(18,25,41);
 }
 
 #category-span{
     margin-right: 1%;
     margin-left: auto;
-
-    /* border: 2px solid black; */
 }
 
 /*other-styles*/
@@ -206,4 +189,24 @@ h1{
 
 .font-size-opoint9rem{
     font-size: 0.9rem;
+}
+
+.Personal{
+    background-color: rgb(223, 129, 129);
+}
+
+.Work{
+    background-color: rgb(58, 124, 185);
+}
+
+.School{
+    background-color: rgb(60, 172, 64);
+}
+
+.Cleaning{
+    background-color: rgb(111, 24, 103);
+}
+
+.Other{
+    background-color: rgb(225, 139, 25);
 }

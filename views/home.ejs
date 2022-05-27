@@ -10,6 +10,7 @@
         <div id="main-container">
             <h1 class="font-family-fontawesome">TODO App</h1>
             <div id="form-container">
+                <!-- FORM -->
                 <form action="/add-task" method="POST">
                     <input type="text" id="task-description" name="task" placeholder="Description - What do you need to do?" required>
                     <select id="category" name="category" required>
@@ -36,30 +37,54 @@
             </div>
 
             <div id="tasks-list-container">
-                <% for(let i of tasksArr) { %>
-                    <div id="task-container">
-                        <!-- here 'id' refers to the id of the element which is stored in our database -->
-                        <a href="/delete-task/?id=<%= i._id %>"><i class="fa-solid fa-ban"></i></a>
-                        <div id="task-date-div">
-                                <%= i.task %>
-                                <br>
-                                <span id="date">
-                                    <i class="fa-solid fa-calendar font-size-opoint9rem"></i>
-                                    <%= i.date %>
-                                </span>
-                            </div>
-                            <% if(i.category==="Personal") { %>
-                                <span id="category-span" class="Personal">
-                                <%= i.category %>
-                                </span>
-                            <%}%>
-                            <% if(i.category==="Work") { %>
-                                <span id="category-span" class="Work">
-                                <%= i.category %>
-                                </span>
-                            <%}%>
-                        
+                <% if(tasksArr.length==0) { %>
+                    <div id="empty-task-container">
+                        <i class="fa-solid fa-circle-check fa-2xl"></i>
+                        <h1>No todo task</h1>
                     </div>
+                <% }else { %>
+                    <% for(let i of tasksArr) { %>
+                        <div id="task-container">
+                            <!-- here 'i._id' refers to the id of the 'i-th' element which is stored in our database -->
+                            <a href="/delete-task/?id=<%= i._id %>"><i class="fa-solid fa-ban"></i></a>
+                            <div id="task-date-div">
+                                    <%= i.task %>
+                                    <br>
+                                    <span id="date">
+                                        <i class="fa-solid fa-calendar font-size-opoint9rem"></i>
+                                        <%= i.date %>
+                                    </span>
+                                </div>
+
+                                <!-- depending upon the 'category' of the task, creating the span -->
+                                <% if(i.category==="Personal") { %>
+                                    <span id="category-span" class="Personal">
+                                    <%= i.category %>
+                                    </span>
+                                <%}%>
+                                <% if(i.category==="Work") { %>
+                                    <span id="category-span" class="Work">
+                                    <%= i.category %>
+                                    </span>
+                                <%}%>
+                                <% if(i.category==="School") { %>
+                                    <span id="category-span" class="School">
+                                    <%= i.category %>
+                                    </span>
+                                <%}%>
+                                <% if(i.category==="Cleaning") { %>
+                                    <span id="category-span" class="Cleaning">
+                                    <%= i.category %>
+                                    </span>
+                                <%}%>
+                                <% if(i.category==="Other") { %>
+                                    <span id="category-span" class="Other">
+                                    <%= i.category %>
+                                    </span>
+                                <%}%>
+                            
+                        </div>
+                    <% } %>
                 <% } %>
             </div>
         </div>
