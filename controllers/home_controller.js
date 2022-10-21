@@ -7,7 +7,7 @@ module.exports.home = function(req, res){
             return;
         }
         return res.render('home.ejs', {
-            title: "MongoDB",
+            title: "to-do app",
             tasksArr: myTodoModel
         });
     });

@@ -48,40 +48,40 @@
                             <!-- here 'i._id' refers to the id of the 'i-th' element which is stored in our database -->
                             <a href="/delete-task/?id=<%= i._id %>"><i class="fa-solid fa-ban"></i></a>
                             <div id="task-date-div">
-                                    <%= i.task %>
-                                    <br>
-                                    <span id="date">
-                                        <i class="fa-solid fa-calendar font-size-opoint9rem"></i>
-                                        <%= i.date %>
-                                    </span>
-                                </div>
+                                <%= i.task %>
+                                <br>
+                                <span id="date">
+                                    <i class="fa-solid fa-calendar font-size-opoint9rem"></i>
+                                    <%= i.date %>
+                                </span>
+                            </div>
 
-                                <!-- depending upon the 'category' of the task, creating the span -->
-                                <% if(i.category==="Personal") { %>
-                                    <span id="category-span" class="Personal">
-                                    <%= i.category %>
-                                    </span>
-                                <%}%>
-                                <% if(i.category==="Work") { %>
-                                    <span id="category-span" class="Work">
-                                    <%= i.category %>
-                                    </span>
-                                <%}%>
-                                <% if(i.category==="School") { %>
-                                    <span id="category-span" class="School">
-                                    <%= i.category %>
-                                    </span>
-                                <%}%>
-                                <% if(i.category==="Cleaning") { %>
-                                    <span id="category-span" class="Cleaning">
-                                    <%= i.category %>
-                                    </span>
-                                <%}%>
-                                <% if(i.category==="Other") { %>
-                                    <span id="category-span" class="Other">
-                                    <%= i.category %>
-                                    </span>
-                                <%}%>
+                            <!-- depending upon the 'category' of the task, creating the span -->
+                            <% if(i.category==="Personal") { %>
+                                <span id="category-span" class="Personal">
+                                <%= i.category %>
+                                </span>
+                            <%}%>
+                            <% if(i.category==="Work") { %>
+                                <span id="category-span" class="Work">
+                                <%= i.category %>
+                                </span>
+                            <%}%>
+                            <% if(i.category==="School") { %>
+                                <span id="category-span" class="School">
+                                <%= i.category %>
+                                </span>
+                            <%}%>
+                            <% if(i.category==="Cleaning") { %>
+                                <span id="category-span" class="Cleaning">
+                                <%= i.category %>
+                                </span>
+                            <%}%>
+                            <% if(i.category==="Other") { %>
+                                <span id="category-span" class="Other">
+                                <%= i.category %>
+                                </span>
+                            <%}%>
                             
                         </div>
                     <% } %>
