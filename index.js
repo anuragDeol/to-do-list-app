@@ -1,8 +1,10 @@
+require("dotenv").config();     // to read '.env' file
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
-const db = require('./config/mongoose');
+// const db = require("./config/mongoose");
 const bodyParser = require('body-parser');
+const { default: mongoose } = require('mongoose');
 
 // create express app
 app.use(express.static('./assets'));
@@ -16,6 +18,16 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // use express router
 app.use('/', require('./routes'));
+
+// DB Connection
+mongoose
+    .connect(process.env.DATABASE, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => {
+        console.log("Success! MongodbAtlas DB Connected");
+    });
 
 app.listen(port, function(err){
     if(err){
