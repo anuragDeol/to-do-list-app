@@ -4,8 +4,7 @@
   "description": "My first major Nodejs project - To Do List app",
   "main": "index.js",
   "scripts": {
-    "web": "npm start",
-    "npm start": "nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
